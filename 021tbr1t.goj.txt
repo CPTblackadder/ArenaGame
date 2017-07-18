@@ -1,0 +1,30 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   Assembly-CSharp.csproj
+#	modified:   Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+#	modified:   Library/ScriptMapper
+#	modified:   Library/assetDatabase3
+#	modified:   Library/metadata/00/00000000000000002000000000000000
+#	modified:   Library/metadata/00/00000000000000003000000000000000
+#	modified:   Library/metadata/00/00000000000000004000000000000000
+#	modified:   Library/metadata/00/00000000000000004100000000000000
+#	modified:   Library/metadata/00/00000000000000005100000000000000
+#	modified:   Library/metadata/00/00000000000000006000000000000000
+#	modified:   Library/metadata/00/00000000000000006100000000000000
+#	modified:   Library/metadata/00/00000000000000007000000000000000
+#	modified:   Library/metadata/00/00000000000000007100000000000000
+#	modified:   Library/metadata/00/00000000000000008000000000000000
+#	modified:   Library/metadata/00/00000000000000009000000000000000
+#	modified:   Library/metadata/00/0000000000000000a000000000000000
+#	modified:   Library/metadata/00/0000000000000000a100000000000000
+#	modified:   Library/metadata/00/0000000000000000b000000000000000
+#	modified:   Library/metadata/00/0000000000000000c000000000000000
+#	modified:   Library/metadata/ce/cee1621268b61904da8c6dec7b6ddd08
+#	modified:   Library/metadata/ee/ee167b7eb8c17db42b00b175fe57ba55
+#
+
