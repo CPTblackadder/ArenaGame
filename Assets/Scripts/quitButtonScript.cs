@@ -19,10 +19,9 @@ public class quitButtonScript : MonoBehaviour {
 	void QuitProgram(){
 		Analytics.CustomEvent ("Quit", new Dictionary<string, object>
 		{
-			{ "score at end",GlobalVariables.maxObjectsEver},
-			{"time spent playing",Time.fixedTime}
+				{"time spent playing",Time.fixedTime}
 		});
-		
+		Debug.Log ("Quit Application");
 		Application.Quit ();
 	}
 }

@@ -27,10 +27,19 @@ public class UIControlScript : MonoBehaviour {
 			for (int i = 0; i < 7; i++) {
 				bodyPartStatus += "\n" + currentChar.bodyParts[i].GetDescription() + ": " + currentChar.bodyParts[i].getStatus();
 			}
+			string clanPart;
+			if (currentChar.clan != null) {
+				clanPart = "\nClan: " + currentChar.clan.name;
+			} else {
+				clanPart = "";
+			}
 			statsViewerText.text = "Name: " + currentChar.firstname + " " + currentChar.lastname + 
+				clanPart +
 				"\nHealth: " + currentChar.health +
 				"\nStrength: " + currentChar.strength +
-				"\nSpeed: " + currentChar.speed + bodyPartStatus;
+				"\nSpeed: " + currentChar.speed + 
+				"\nSocial: " + currentChar.social +
+				bodyPartStatus;
 		} else {
 			statsViewerText.text = "";
 		}

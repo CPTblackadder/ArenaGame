@@ -8,10 +8,19 @@ public class Character : MonoBehaviour {
 	public string lastname;
 	public int health;
 	public int strength;
+	public int social;
 	public int speed;
-	public int turnsToAttack;
+	public Clan clan;
+	private int turnsToAttack;
 	public BodyPart[] bodyParts = new BodyPart[7];
+	private bool readyToAttack;
+	public HashSet<Clan> poorRelations = new HashSet<Clan>();
 
+
+	public Character(){
+		clan = null;
+
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -31,9 +40,13 @@ public class Character : MonoBehaviour {
 		if (speed == 0) {
 			speed = Random.Range (5, 10);
 		}
+		if (social == 0) {
+			social = Random.Range (5, 10);
+		}
 		for (int i = 0; i < bodyParts.Length; i++) {
 			bodyParts[i] = new BodyPart(this,(BodyPart.BodyParts) i);
 		}
+		clan = null;
 
 	}
 
@@ -46,23 +59,37 @@ public class Character : MonoBehaviour {
 		GameObject target = LocateTarget ();
 		float step = speed * Time.deltaTime;
 		if (target != null) {
-			transform.position = Vector3.MoveTowards (transform.position, target.transform.position, step);
+			//transform.position = Vector3.MoveTowards (transform.position, target.transform.position, step);
+			Vector2 moveDirection = new Vector2(target.transform.position.x - transform.position.x,target.transform.position.y - transform.position.y ).normalized;
+			if (gameObject.GetComponent<Rigidbody2D> ().velocity.magnitude < speed){
+				gameObject.GetComponent<Rigidbody2D> ().AddForce (moveDirection * 10);
+			}
+		}
+		if (turnsToAttack / 3 >= Random.Range (25, 30) - speed) {
+			readyToAttack = true;
+		} else {
+			turnsToAttack += 1;
 		}
 
 	}
 
 
 	void OnCollisionEnter2D(Collision2D collider){
-		if (collider.gameObject.GetComponent<Character> () != null) {
-			if (collider.gameObject.GetComponent<Character> ().speed < speed + Random.Range (-2, 3)) {
+		Character otherCharacter = collider.gameObject.GetComponent<Character> ();
+		if (otherCharacter != null) {
+			Clan.setUpClanStep (this, otherCharacter);
+			if (otherCharacter.speed < speed + Random.Range (-2, 3) && clan != otherCharacter.clan) {
 				turnsToAttack += 5;
 			}
 		}
+
 	}
 
 	void OnCollisionStay2D(Collision2D collider){
-		if (collider.gameObject.GetComponent<Character>() != null) {
-			if (turnsToAttack / 3 >= Random.Range (25, 50) - speed) {
+		Character otherCharacter = collider.gameObject.GetComponent<Character> ();
+
+		if (otherCharacter != null ) {
+			if (readyToAttack && clan != otherCharacter.clan) {
 				Attack attack;
 				List<BodyPart> functionalLimbs = GetFunctionalLimbs ();
 				BodyPart attackLimb;
@@ -72,25 +99,24 @@ public class Character : MonoBehaviour {
 					attackLimb = functionalLimbs [Random.Range (0, functionalLimbs.Count)];
 				}
 				switch (attackLimb.partId) {
-				case BodyPart.BodyParts.LeftArm: 
+				case BodyPart.BodyParts.LeftArm:
 				case BodyPart.BodyParts.RightArm:
-					attack = new Attack (this, collider.gameObject.GetComponent<Character> (), (Attack.AttackDirection)Random.Range (0, 3), attackLimb, new Weapon ());
+					attack = new Attack (this, otherCharacter, (Attack.AttackDirection)Random.Range (0, 3), attackLimb, new Weapon ());
 					break;
 				case BodyPart.BodyParts.LeftLeg: 
 				case BodyPart.BodyParts.RightLeg:
-					attack = new Attack (this, collider.gameObject.GetComponent<Character> (), (Attack.AttackDirection)Random.Range (0, 2), attackLimb, new Weapon ());
+					attack = new Attack (this, otherCharacter, (Attack.AttackDirection)Random.Range (0, 2), attackLimb, new Weapon ());
 					break;
 				default : 
-					attack = new Attack (this, collider.gameObject.GetComponent<Character> (), Attack.AttackDirection.Low, attackLimb, new Weapon (-2));//on the gound as both legs not working, so can only attack low with head
+					attack = new Attack (this, otherCharacter, Attack.AttackDirection.Low, attackLimb, new Weapon (-2));//on the gound as both legs not working, so can only attack low with head
 					break;
 				}
 				collider.gameObject.SendMessage ("RecieveAttack", attack);
+				poorRelations.Add (otherCharacter.clan);
+				readyToAttack = false;
 				turnsToAttack = 0;
-			} else {
-				turnsToAttack += 1;
 			}
 		} else {
-			Debug.Log ("bump against wall");
 		}
 	}
 
@@ -132,18 +158,21 @@ public class Character : MonoBehaviour {
 
 	//TODO add leaving a corpse
 	private void CharacterDie(){
-		GlobalVariables.logger.AddStringToLog (GetName () + " has died");
+		GlobalVariables.logger.AddStringToLog (GetName () + " has died\n");
 		GameObject.Destroy (gameObject);
+		if (clan != null) {
+			clan.removeMember (this);
+		}
 	}
 		
-	//returns closest character
+	//returns closest character not in same clan
 	private GameObject LocateTarget () {
 		float closestDistance = float.MaxValue;
 		float tempDistance;
 		GameObject possibleTarget = null;
 		foreach (var target in GlobalVariables.allCharacters){
 			tempDistance = Vector3.Distance (this.transform.position, target.transform.position);
-			if (closestDistance > tempDistance && target != gameObject) {
+			if (closestDistance > tempDistance && target != gameObject && (clan == null || clan != target.GetComponent<Character>().clan)) {
 				closestDistance = tempDistance;
 				possibleTarget = target;
 			}
