@@ -19,8 +19,8 @@ public class Attack {
 		this.weapon = weapon;
 		this.defenderHitIn = ChooseDefenderHitLocation ();
 		this.damage = DetermineDamageDone ();
-		defender.RecieveAttack (this);
 		GlobalVariables.logger.AddAttackToLog (this);
+		defender.RecieveAttack (this);
 	}
 
 	//TODO add stuff to simulate being knocked down onto the ground

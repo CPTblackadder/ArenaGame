@@ -22,10 +22,6 @@ public class Background : MonoBehaviour {
 				if (Physics.Raycast (ray, out hit)) {
 					GameObject newCharacter = Instantiate(playerModel,hit.point,Quaternion.identity);
 					GlobalVariables.allCharacters.Add (newCharacter);
-					int newCount = GlobalVariables.allCharacters.Count;
-					if (newCount > GlobalVariables.maxObjectsEver) {
-						GlobalVariables.maxObjectsEver = newCount;
-					}
 				}
 			} else {
 				RaycastHit2D hit = Physics2D.Raycast(new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,Camera.main.ScreenToWorldPoint(Input.mousePosition).y), Vector2.zero, 0f);
@@ -59,7 +55,6 @@ public class Background : MonoBehaviour {
 		}
 		#endif
 
-		text.text = "Score: " + GlobalVariables.maxObjectsEver;
 
 
 	}

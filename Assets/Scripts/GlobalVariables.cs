@@ -4,7 +4,6 @@ using UnityEngine;
 
 public static class GlobalVariables {
 	public static List<GameObject> allCharacters= new List<GameObject>();
-	public static int maxObjectsEver = 0;
 	public static bool statsViewerOn = false;
 	public static UIControlScript logger;
 	public static string[] fnames = new string[]{"Joe","Bob","Jamie","David","Rob","Alex","Katie","Ellen","Linda","Rosie","John","Kate","Douglas"};
