@@ -51,12 +51,13 @@
      <Compile Include="Assets\Scripts\Character Related Scripts\Attack.cs" />
      <Compile Include="Assets\Scripts\Character Related Scripts\BodyPart.cs" />
      <Compile Include="Assets\Scripts\Character Related Scripts\Character.cs" />
-     <Compile Include="Assets\Scripts\Character Related Scripts\Clan.cs" />
      <Compile Include="Assets\Scripts\Character Related Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\Character Related Scripts\Weapon.cs" />
      <Compile Include="Assets\Scripts\GlobalVariables.cs" />
      <Compile Include="Assets\Scripts\SpawnManyScript.cs" />
      <Compile Include="Assets\Scripts\UIControlScript.cs" />
+     <Compile Include="Assets\Scripts\clan\Clan.cs" />
+     <Compile Include="Assets\Scripts\clan\ColourManager.cs" />
      <Compile Include="Assets\Scripts\quitButtonScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -78,6 +79,12 @@
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

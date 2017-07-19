@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Clan {
-	public static int numberOfClans;
+	private static ColourManager colourManager = new ColourManager();
 	public Character leader;
 	public string name;
 	public Color clanColour;
@@ -21,33 +21,11 @@ public class Clan {
 			if (former1.social + former2.social - former2.clan.GetNumbers () > Random.Range (10, 20) && !former1.poorRelations.Contains(former2.clan)) {
 				former2.clan.addMember (former1);
 			}
-		} else if (former1.clan == null && former2.clan == null && numberOfClans < 7) {
+		} else if (former1.clan == null && former2.clan == null && colourManager.colourIsAvailable()) {
 			if (former1.social + former2.social > Random.Range (10, 20)) {
 				new Clan (former1, former2);
 			}
 		}
-	}
-
-	public static Color selectClanColour(){
-		switch (numberOfClans) {
-		case 0:
-			return Color.black;
-		case 1: 
-			return Color.blue;
-		case 2:
-			return Color.cyan;
-		case 3:
-			return Color.grey;
-		case 4:
-			return Color.green;
-		case 5:
-			return Color.magenta;
-		case 6:
-			return Color.yellow;
-		default:
-			return Color.red;
-		}
-
 	}
 
 	public Clan(Character former1, Character former2){
@@ -62,8 +40,7 @@ public class Clan {
 		former1.clan = this;
 		name = former1.GetName() + "'s clan";
 		numberOfMembers = 2;
-		clanColour = selectClanColour ();
-		numberOfClans += 1;
+		clanColour = colourManager.getAColour();
 		former1.gameObject.GetComponent<SpriteRenderer> ().color = clanColour;
 		former2.gameObject.GetComponent<SpriteRenderer> ().color = clanColour;
 		Debug.Log(former1.GetName() + " and " + former2.GetName() + " set up " + name);
@@ -100,12 +77,12 @@ public class Clan {
 	}
 
 	public void disbandClan(){
-		foreach (Character m in members){ 
+		foreach (Character m in members){
 			m.clan = null;
 			m.gameObject.GetComponent<SpriteRenderer> ().color = Color.red;
 		}
 		GlobalVariables.logger.AddStringToLog (name + " is disbanded\n");
-		numberOfClans -= 1;
+		colourManager.relenquishColour (clanColour);
 	}
 
 }

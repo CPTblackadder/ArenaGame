@@ -62,3 +62,5 @@ C:\Users\Rob\Documents\ArenaGame\Temp\bin\Debug\UnityEngine.Analytics.xml
 C:\Users\Rob\Documents\ArenaGame\Temp\bin\Debug\UnityEngine.HoloLens.xml
 C:\Users\Rob\Documents\ArenaGame\Temp\bin\Debug\UnityEngine.VR.xml
 C:\Users\Rob\Documents\ArenaGame\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Rob\Documents\ArenaGame\Temp\bin\Debug\UnityEditor.iOS.Extensions.Common.dll
+C:\Users\Rob\Documents\ArenaGame\Temp\bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
