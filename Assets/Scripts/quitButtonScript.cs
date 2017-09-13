@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.SceneManagement;
 
 public class quitButtonScript : MonoBehaviour {
 
@@ -16,12 +17,16 @@ public class quitButtonScript : MonoBehaviour {
 		}
 	}
 
-	void QuitProgram(){
+	public void QuitProgram(){
 		Analytics.CustomEvent ("Quit", new Dictionary<string, object>
 		{
 				{"time spent playing",Time.fixedTime}
 		});
 		Debug.Log ("Quit Application");
 		Application.Quit ();
+	}
+
+	public void QuitToMainMenu(){
+		SceneManager.LoadScene ("Scenes/MenuScene");
 	}
 }

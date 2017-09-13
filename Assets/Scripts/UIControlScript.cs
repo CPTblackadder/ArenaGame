@@ -33,12 +33,12 @@ public class UIControlScript : MonoBehaviour {
 			} else {
 				clanPart = "";
 			}
-			statsViewerText.text = "Name: " + currentChar.firstname + " " + currentChar.lastname + 
+			statsViewerText.text = "Name: " + currentChar.stats.firstname + " " + currentChar.stats.lastname + 
 				clanPart +
 				"\nHealth: " + currentChar.health +
-				"\nStrength: " + currentChar.strength +
-				"\nSpeed: " + currentChar.speed + 
-				"\nSocial: " + currentChar.social +
+				"\nStrength: " + currentChar.stats.strength +
+				"\nSpeed: " + currentChar.stats.speed + 
+				"\nSocial: " + currentChar.stats.social +
 				bodyPartStatus;
 		} else {
 			statsViewerText.text = "";

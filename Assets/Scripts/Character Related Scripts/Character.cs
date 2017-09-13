@@ -4,50 +4,34 @@ using UnityEngine;
 
 public class Character : MonoBehaviour {
 	//stats
-	public string firstname;
-	public string lastname;
+	public CharacterStats stats;
+	public int turnsToAttack;
+	public bool readyToAttack;
 	public int health;
-	public int strength;
-	public int social;
-	public int speed;
-	public Clan clan;
-	private int turnsToAttack;
 	public BodyPart[] bodyParts = new BodyPart[7];
-	private bool readyToAttack;
 	public HashSet<Clan> poorRelations = new HashSet<Clan>();
-
+	public Clan clan;
 
 	public Character(){
-		clan = null;
+	}
 
+	public Character(CharacterStats stats){
+		this.stats = stats;
 	}
 
 	// Use this for initialization
 	void Start () {
-		if (firstname == "") {
-			firstname = GlobalVariables.fnames[Random.Range(0,GlobalVariables.fnames.Length)];
-		}
-		if (lastname == "") {
-			lastname = GlobalVariables.lnames[Random.Range(0,GlobalVariables.lnames.Length)];
+		if (stats == null) {
+			stats = new CharacterStats ();
 		}
 		//default stats
 		if (health == 0) {
 			health = 100;
 		}
-		if (strength == 0) {
-			strength = Random.Range (5, 10);
-		}
-		if (speed == 0) {
-			speed = Random.Range (5, 10);
-		}
-		if (social == 0) {
-			social = Random.Range (5, 10);
-		}
 		for (int i = 0; i < bodyParts.Length; i++) {
 			bodyParts[i] = new BodyPart(this,(BodyPart.BodyParts) i);
 		}
 		clan = null;
-
 	}
 
 
@@ -57,15 +41,15 @@ public class Character : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		GameObject target = LocateTarget ();
-		float step = speed * Time.deltaTime;
+		//float step = speed * Time.deltaTime;
 		if (target != null) {
 			//transform.position = Vector3.MoveTowards (transform.position, target.transform.position, step);
 			Vector2 moveDirection = new Vector2(target.transform.position.x - transform.position.x,target.transform.position.y - transform.position.y ).normalized;
-			if (gameObject.GetComponent<Rigidbody2D> ().velocity.magnitude < speed){
+			if (gameObject.GetComponent<Rigidbody2D> ().velocity.magnitude < stats.speed){
 				gameObject.GetComponent<Rigidbody2D> ().AddForce (moveDirection * 10);
 			}
 		}
-		if (turnsToAttack / 3 >= Random.Range (25, 30) - speed) {
+		if (turnsToAttack / 3 >= Random.Range (25, 30) - stats.speed) {
 			readyToAttack = true;
 		} else {
 			turnsToAttack += 1;
@@ -78,7 +62,7 @@ public class Character : MonoBehaviour {
 		Character otherCharacter = collider.gameObject.GetComponent<Character> ();
 		if (otherCharacter != null) {
 			Clan.setUpClanStep (this, otherCharacter);
-			if (otherCharacter.speed < speed + Random.Range (-2, 3) && clan != otherCharacter.clan) {
+			if (otherCharacter.stats.speed < stats.speed + Random.Range (-2, 3) && clan != otherCharacter.clan) {
 				turnsToAttack += 5;
 			}
 		}
@@ -121,14 +105,15 @@ public class Character : MonoBehaviour {
 	}
 
 	void OnDestroy(){
-		GlobalVariables.allCharacters.Remove (gameObject);
+		
+		GlobalVariables.aliveCharacters.Remove (gameObject);
 		UIControlScript.RemoveIfMe (gameObject);
 	}
 
 
 	//custom functions
 
-	private List<BodyPart> GetFunctionalLimbs(){
+	public List<BodyPart> GetFunctionalLimbs(){
 		List<BodyPart> list = new List<BodyPart>();
 		if (bodyParts[1].IsFunctional()){//tests if the right arm is functional
 			list.Add(bodyParts[1]);
@@ -170,7 +155,7 @@ public class Character : MonoBehaviour {
 		float closestDistance = float.MaxValue;
 		float tempDistance;
 		GameObject possibleTarget = null;
-		foreach (var target in GlobalVariables.allCharacters){
+		foreach (var target in GlobalVariables.aliveCharacters){
 			tempDistance = Vector3.Distance (this.transform.position, target.transform.position);
 			if (closestDistance > tempDistance && target != gameObject && (clan == null || clan != target.GetComponent<Character>().clan)) {
 				closestDistance = tempDistance;
@@ -181,6 +166,6 @@ public class Character : MonoBehaviour {
 	}
 
 	public string GetName(){
-		return firstname + " " + lastname;
+		return stats.GetName ();
 	}
 }

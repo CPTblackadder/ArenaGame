@@ -43,7 +43,7 @@ public class Attack {
 
 	private int DetermineDamageDone (){
 		int random = Random.Range (0, 7);
-		return Mathf.Max(0,(random + attacker.strength - defender.strength + (weapon.damage * 2)));
+		return Mathf.Max(0,(random + attacker.stats.strength - defender.stats.strength + (weapon.damage * 2)));
 	}
 
 	public string WriteDescription(){

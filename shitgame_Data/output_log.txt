@@ -1,0 +1,260 @@
+Initialize engine version: 5.6.2f1 (a2913c821e27)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c03)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   22.21.13.8528
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\backups\unity projects\ArenaGame\shitgame_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\backups\unity projects\ArenaGame\shitgame_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\backups\unity projects\ArenaGame\shitgame_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\backups\unity projects\ArenaGame\shitgame_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\backups\unity projects\ArenaGame\shitgame_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\backups\unity projects\ArenaGame\shitgame_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\backups\unity projects\ArenaGame\shitgame_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\backups\unity projects\ArenaGame\shitgame_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.018 seconds
+Platform assembly: D:\backups\unity projects\ArenaGame\shitgame_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\backups\unity projects\ArenaGame\shitgame_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.644323 ms
+Setting up 6 worker threads for Enlighten.
+  Thread -> id: 1988 -> priority: 1 
+  Thread -> id: 14b4 -> priority: 1 
+  Thread -> id: 750 -> priority: 1 
+  Thread -> id: 1be8 -> priority: 1 
+  Thread -> id: 233c -> priority: 1 
+  Thread -> id: 20e8 -> priority: 1 
+Kate Jones
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Kate Jones button clicked.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Terrian') is missing!
+ 
+(Filename:  Line: 1743)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.591887 ms
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 362.
+Total: 0.310626 ms (FindLiveObjects: 0.028782 ms CreateObjectMapping: 0.016813 ms MarkObjects: 0.216013 ms  DeleteObjects: 0.048446 ms)
+
+Katie Longberg and Bob Thomas set up Katie Longberg's clan
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Jamie Oloman and Katie Oloman set up Jamie Oloman's clan
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Jamie Clarke joins Katie Longberg's clan
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Rob Nicholson joins Jamie Oloman's clan
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Douglas Nicholson and David Jones set up Douglas Nicholson's clan
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Alex McDougal and Rosie McDougal set up Alex McDougal's clan
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Alex Doe and Linda van Dijk set up Alex Doe's clan
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Kate Thomas and David Nicholson set up Kate Thomas's clan
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Jamie McDougal and Kate Nicholson set up Jamie McDougal's clan
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Bob van Dijk joins Douglas Nicholson's clan
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Rob McDougal joins Jamie McDougal's clan
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BodyPart.TakeDamage (Int32 damageToTake) [0x00000] in <filename unknown>:0 
+  at Character.RecieveAttack (.Attack attack) [0x00000] in <filename unknown>:0 
+  at Attack..ctor (.Character attacker, .Character defender, AttackDirection attackDirection, .BodyPart limbUsed, .Weapon weapon) [0x00000] in <filename unknown>:0 
+  at Character.OnCollisionStay2D (UnityEngine.Collision2D collider) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Jamie Jones and David Yeoung set up Jamie Jones's clan
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Linda van Dijk joins Douglas Nicholson's clan
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Douglas van Dijk joins Alex McDougal's clan
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Quit Application
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.895686 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 432.
+Total: 0.533194 ms (FindLiveObjects: 0.025648 ms CreateObjectMapping: 0.027927 ms MarkObjects: 0.451690 ms  DeleteObjects: 0.027072 ms)
+

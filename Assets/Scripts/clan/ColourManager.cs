@@ -73,5 +73,8 @@ public class ColourManager {
 		}
 	}
 
+	public bool checkIfOnlyOneClan(){
+		return NUMBER_OF_COLOURS - coloursAvailable == 1;
+	}
 
 }

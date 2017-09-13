@@ -14,22 +14,22 @@ public class Clan {
 
 	public static void setUpClanStep(Character former1, Character former2){
 		if (former1.clan != null && former2.clan == null) {//try to recruit collided
-			if (former1.social + former2.social - former1.clan.GetNumbers () > Random.Range (10, 20) && !former2.poorRelations.Contains(former1.clan)) {
+			if (former1.stats.social + former2.stats.social - former1.clan.GetNumbers () > Random.Range (10, 20) && !former2.poorRelations.Contains(former1.clan)) {
 				former1.clan.addMember (former2);
 			}
 		} else if (former1.clan == null && former2.clan != null){//try to be recruited by collided
-			if (former1.social + former2.social - former2.clan.GetNumbers () > Random.Range (10, 20) && !former1.poorRelations.Contains(former2.clan)) {
+			if (former1.stats.social + former2.stats.social - former2.clan.GetNumbers () > Random.Range (10, 20) && !former1.poorRelations.Contains(former2.clan)) {
 				former2.clan.addMember (former1);
 			}
 		} else if (former1.clan == null && former2.clan == null && colourManager.colourIsAvailable()) {
-			if (former1.social + former2.social > Random.Range (10, 20)) {
+			if (former1.stats.social + former2.stats.social > Random.Range (10, 20)) {
 				new Clan (former1, former2);
 			}
 		}
 	}
 
 	public Clan(Character former1, Character former2){
-		if (former1.social >= former2.social) {
+		if (former1.stats.social >= former2.stats.social) {
 			leader = former1;
 		} else {
 			leader = former2;
@@ -84,6 +84,7 @@ public class Clan {
 		GlobalVariables.logger.AddStringToLog (name + " is disbanded\n");
 		colourManager.relenquishColour (clanColour);
 	}
+
 
 }
 

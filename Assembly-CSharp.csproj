@@ -52,12 +52,21 @@
      <Compile Include="Assets\Scripts\Character Related Scripts\BodyPart.cs" />
      <Compile Include="Assets\Scripts\Character Related Scripts\Character.cs" />
      <Compile Include="Assets\Scripts\Character Related Scripts\Inventory.cs" />
+     <Compile Include="Assets\Scripts\Character Related Scripts\Permanance\ButtonScript.cs" />
+     <Compile Include="Assets\Scripts\Character Related Scripts\Permanance\CharacterStats.cs" />
+     <Compile Include="Assets\Scripts\Character Related Scripts\Permanance\ListControlScript.cs" />
+     <Compile Include="Assets\Scripts\Character Related Scripts\Permanance\NameEditor.cs" />
      <Compile Include="Assets\Scripts\Character Related Scripts\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Clan\Clan.cs" />
+     <Compile Include="Assets\Scripts\Clan\ColourManager.cs" />
+     <Compile Include="Assets\Scripts\GameControl\ButtonSetUpScript.cs" />
+     <Compile Include="Assets\Scripts\GameControl\GameControl.cs" />
+     <Compile Include="Assets\Scripts\GameControl\GameSetUp.cs" />
+     <Compile Include="Assets\Scripts\GameControl\ListControlSetUpScript.cs" />
      <Compile Include="Assets\Scripts\GlobalVariables.cs" />
-     <Compile Include="Assets\Scripts\SpawnManyScript.cs" />
+     <Compile Include="Assets\Scripts\SpawnInitialCharacters.cs" />
+     <Compile Include="Assets\Scripts\SpawningScripts.cs" />
      <Compile Include="Assets\Scripts\UIControlScript.cs" />
-     <Compile Include="Assets\Scripts\clan\Clan.cs" />
-     <Compile Include="Assets\Scripts\clan\ColourManager.cs" />
      <Compile Include="Assets\Scripts\quitButtonScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

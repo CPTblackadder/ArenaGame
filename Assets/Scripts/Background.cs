@@ -20,8 +20,7 @@ public class Background : MonoBehaviour {
 				ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
 				if (Physics.Raycast (ray, out hit)) {
-					GameObject newCharacter = Instantiate(playerModel,hit.point,Quaternion.identity);
-					GlobalVariables.allCharacters.Add (newCharacter);
+					SpawningScripts.script.spawnACharacter(hit.point);
 				}
 			} else {
 				RaycastHit2D hit = Physics2D.Raycast(new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,Camera.main.ScreenToWorldPoint(Input.mousePosition).y), Vector2.zero, 0f);

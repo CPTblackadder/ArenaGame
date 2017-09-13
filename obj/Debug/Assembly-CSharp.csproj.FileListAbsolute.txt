@@ -64,3 +64,36 @@ C:\Users\Rob\Documents\ArenaGame\Temp\bin\Debug\UnityEngine.VR.xml
 C:\Users\Rob\Documents\ArenaGame\obj\Debug\Assembly-CSharp.pdb
 C:\Users\Rob\Documents\ArenaGame\Temp\bin\Debug\UnityEditor.iOS.Extensions.Common.dll
 C:\Users\Rob\Documents\ArenaGame\Temp\bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\Assembly-CSharp.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\nunit.framework.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEditor.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEditor.iOS.Extensions.Common.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEngine.Analytics.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEngine.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEngine.HoloLens.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEngine.Networking.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEngine.TestRunner.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEngine.UI.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEngine.VR.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\Mono.Cecil.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\Unity.SerializationLogic.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\Unity.DataContract.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\Unity.UNetWeaver.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\Unity.CecilTools.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEngine.xml
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEditor.xml
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEngine.UI.xml
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEngine.Networking.xml
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEngine.TestRunner.xml
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\nunit.framework.xml
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEngine.Analytics.xml
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEngine.HoloLens.xml
+D:\backups\unity projects\ArenaGame\Temp\bin\Debug\UnityEngine.VR.xml
+D:\backups\unity projects\ArenaGame\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+D:\backups\unity projects\ArenaGame\obj\Debug\Assembly-CSharp.dll
+D:\backups\unity projects\ArenaGame\obj\Debug\Assembly-CSharp.pdb
