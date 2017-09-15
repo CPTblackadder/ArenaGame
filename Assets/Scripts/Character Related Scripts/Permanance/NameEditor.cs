@@ -14,6 +14,8 @@ public class NameEditor : MonoBehaviour
 	public ListControlScript listControl;
 	public Button saveButton;
 	public Button deleteButton;
+	public RawImage image;
+	public ImageController imageController;
 
 
 
@@ -35,16 +37,20 @@ public class NameEditor : MonoBehaviour
 		lastNameInput.text = stats.lastname;
 		saveButton.interactable = true;
 		deleteButton.interactable = true;
+		image.texture = stats.GetImage();
 	}
 
 	public void SaveCharacter(){
 		GameControl.control.EditCharacter (current);
 		listControl.RefreshList ();
-		unloadCurrent ();
+		//TODO decide if it should unload a character when saved
+		//unloadCurrent ();
 	}
 
 	public void NewCharacter(){
-		setCurrent(new CharacterStats ());
+		CharacterStats newChar = new CharacterStats ();
+		newChar.Initialise ();
+		setCurrent(newChar);
 	}
 
 	public void DeleteCharacter(){
@@ -61,6 +67,15 @@ public class NameEditor : MonoBehaviour
 		lastNameInput.text = "";
 		saveButton.interactable = false;
 		deleteButton.interactable = false;
+		Debug.Log (Texture2D.whiteTexture);
+		image.texture = Texture2D.whiteTexture;
 	}
+
+
+	public void ChangeImage(){
+		current.SetImage(imageController.texture);
+		image.texture = current.GetImage ();
+	}
+
 }
 

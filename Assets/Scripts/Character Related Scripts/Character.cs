@@ -23,6 +23,7 @@ public class Character : MonoBehaviour {
 	void Start () {
 		if (stats == null) {
 			stats = new CharacterStats ();
+			stats.Initialise ();
 		}
 		//default stats
 		if (health == 0) {
@@ -73,7 +74,7 @@ public class Character : MonoBehaviour {
 		Character otherCharacter = collider.gameObject.GetComponent<Character> ();
 
 		if (otherCharacter != null ) {
-			if (readyToAttack && clan != otherCharacter.clan) {
+			if (readyToAttack && clan != otherCharacter.clan || clan == null || otherCharacter.clan == null) {
 				Attack attack;
 				List<BodyPart> functionalLimbs = GetFunctionalLimbs ();
 				BodyPart attackLimb;
@@ -107,7 +108,7 @@ public class Character : MonoBehaviour {
 	void OnDestroy(){
 		
 		GlobalVariables.aliveCharacters.Remove (gameObject);
-		UIControlScript.RemoveIfMe (gameObject);
+		UIControlScript.me.RemoveIfMe (gameObject);
 	}
 
 

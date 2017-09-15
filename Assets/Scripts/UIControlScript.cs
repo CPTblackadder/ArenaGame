@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class UIControlScript : MonoBehaviour {
 
-	static public GameObject currentView;
-	static public Character currentChar;
+	public static UIControlScript me;
+	public GameObject currentView;
+	public Character currentChar;
 	public Text statsViewerText;
 	public GameObject spawnABunch;
 	public Text swapModeButtonText;
 	public Text logText;
+	public RawImage characterPortrait;
 	const int MAX_LOG_LENGTH = 4;
 	private string[] textForTheLog = new string[MAX_LOG_LENGTH];
 	private int numOfLogItems;
@@ -19,6 +21,17 @@ public class UIControlScript : MonoBehaviour {
 	UIControlScript(){
 		GlobalVariables.logger = this;
 	}
+
+
+	void Awake () {
+		if (me == null) {
+			me = this;
+			characterPortrait.enabled = false;
+		} else if (this != me) {
+			Destroy (gameObject);
+		}
+	}
+
 
 	// Update is called once per frame
 	void Update () {
@@ -45,22 +58,32 @@ public class UIControlScript : MonoBehaviour {
 		}
 	}
 
-	public static void SetChar(GameObject newView){
+	public void SetChar(GameObject newView){
 		if (newView == null) {
 			currentChar = null;
 			currentView = null;
+			characterPortrait.enabled = false;
 		} else {
 			if (newView.name == "Player Circle(Clone)") {
 				currentView = newView;
 				currentChar = currentView.GetComponent<Character> ();
+				if (currentChar.stats.HasImage ()) {
+					characterPortrait.texture = currentChar.stats.GetImage ();
+					characterPortrait.enabled = true;
+				} else {
+					characterPortrait.enabled = false;
+				}
+			} else {
+				characterPortrait.enabled = false;
 			}
 		}
 	}
 
-	public static void RemoveIfMe(GameObject possibleView){
+	public void RemoveIfMe(GameObject possibleView){
 		if (currentView == possibleView) {
 			currentView = null;
 			currentChar = null;
+			characterPortrait.enabled = false;
 		}
 	}
 

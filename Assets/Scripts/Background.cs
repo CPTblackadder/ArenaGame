@@ -26,10 +26,10 @@ public class Background : MonoBehaviour {
 				RaycastHit2D hit = Physics2D.Raycast(new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,Camera.main.ScreenToWorldPoint(Input.mousePosition).y), Vector2.zero, 0f);
 				if(hit.collider != null){
 					if (hit.collider.gameObject.name == "Player Circle(Clone)"){
-						UIControlScript.SetChar(hit.collider.gameObject);
+						UIControlScript.me.SetChar(hit.collider.gameObject);
 					}
 				} else {
-					UIControlScript.SetChar(null);
+					UIControlScript.me.SetChar(null);
 				}
 			}
 

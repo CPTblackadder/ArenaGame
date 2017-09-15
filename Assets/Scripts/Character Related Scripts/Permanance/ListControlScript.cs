@@ -17,8 +17,6 @@ public class ListControlScript : MonoBehaviour {
 	public void ButtonClicked(CharacterStats stats, ButtonScript button)
 	{
 		SetSelection (button);
-		button.GetComponent<Image> ().color = Color.red;
-		Debug.Log(stats.GetName() + " button clicked.");
 		nameEditor.setCurrent (stats);
 	}
 

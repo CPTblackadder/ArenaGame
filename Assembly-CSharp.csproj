@@ -51,6 +51,10 @@
      <Compile Include="Assets\Scripts\Character Related Scripts\Attack.cs" />
      <Compile Include="Assets\Scripts\Character Related Scripts\BodyPart.cs" />
      <Compile Include="Assets\Scripts\Character Related Scripts\Character.cs" />
+     <Compile Include="Assets\Scripts\Character Related Scripts\ImageRelatedFolder\ImageController.cs" />
+     <Compile Include="Assets\Scripts\Character Related Scripts\ImageRelatedFolder\ImageListButtonScript.cs" />
+     <Compile Include="Assets\Scripts\Character Related Scripts\ImageRelatedFolder\ImageListScript.cs" />
+     <Compile Include="Assets\Scripts\Character Related Scripts\ImageRelatedFolder\LocationOfImageDrop.cs" />
      <Compile Include="Assets\Scripts\Character Related Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\Character Related Scripts\Permanance\ButtonScript.cs" />
      <Compile Include="Assets\Scripts\Character Related Scripts\Permanance\CharacterStats.cs" />
